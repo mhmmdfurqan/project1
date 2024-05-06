@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\MahasiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('master');
+// });
+
+// Route::get('/tes-git', function () {
+//     return "Halo, ini cuma coba pakai git";
 // });
 
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/jurusan/', [JurusanController::class, 'index']);
+
+Route::get('/mahasiswa/', [JurusanController::class, 'index']);
