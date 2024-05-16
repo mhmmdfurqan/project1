@@ -28,7 +28,7 @@
         </div>
         </div>
         <div class="card-body">
-        <form method="POST" action="/jurusan/store/">
+        <form method="POST" action="/jurusan/form/">
             @csrf
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Kode jurusan</label>
