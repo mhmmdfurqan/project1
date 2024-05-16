@@ -1,5 +1,5 @@
 @extends('layouts.master')
-section('title','Tambah Jurusan')
+@section('title','Tambah Jurusan')
 @section('heading','Tambah Jurusan')
 
 @section('bc')
@@ -28,7 +28,19 @@ section('title','Tambah Jurusan')
         </div>
         </div>
         <div class="card-body">
-           
+        <form method="POST" action="/jurusan/store/">
+            @csrf
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Kode jurusan</label>
+                <input type="text" name="kode" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Jurusan</label>
+                <input type="text" name="jurusan" class="form-control" id="">
+            </div>        
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>  
+
         </div>
         <!-- /.card-body -->
 
